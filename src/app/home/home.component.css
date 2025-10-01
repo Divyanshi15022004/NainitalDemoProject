@@ -1,0 +1,56 @@
+/* Header with background image */
+.header-bg {
+    background-image: url('../../assets/klake.jpg'); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-color: rgb(160, 28, 28); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: white;                 
+    padding: 1.5rem 0;            
+}
+
+/* Site title styling */
+.site-title {
+    color: #fff;                  
+    font-weight: bold;            
+    font-size: 2rem;              
+    margin: 0;                    
+}
+
+/* Header buttons styling */
+.header-bg button {
+    min-width: 90px;              
+    font-weight: bold;            
+}
+
+/* Carousel styling */
+.carousel-item img {
+    height: 500px;                
+    object-fit: cover;            
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 576px) {
+    .header-bg .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .header-bg button {
+        min-width: 100%;
+    }
+}
+
+  
+  
