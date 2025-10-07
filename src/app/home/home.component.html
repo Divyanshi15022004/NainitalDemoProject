@@ -1,44 +1,36 @@
-<div class="header-bg py-4">
-  <div class="container d-flex justify-content-between align-items-center">
-    <h2 class="site-title m-0">Nainital-Info</h2>
-    <div>
-      
-      <button class="btn btn-light me-2" [routerLink]="['/login']">
-        <i class="fas fa-sign-in-alt me-1"></i> Login
-      </button>
 
-      
-      <button class="btn btn-light" [routerLink]="['/signup']">
-        <i class="fas fa-user-plus me-1"></i> Signup
-      </button>
+
+  <!-- Header Section -->
+  <div class="header-bg py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h2 class="site-title m-0">NainitalInfo</h2>
+      <div>
+        <button class="btn btn-light me-2">Login</button>
+        <button class="btn btn-light">Signup</button>
+      </div>
     </div>
   </div>
-</div>
 
-   <!-- Carousel -->
-<div class="container-fluid px-5 my-5">
-  <div id="nainitalCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <h1 class="text-center mb-4">Welcome to Nainital</h1>
-
+  <div id="nainitalCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="2000">
+    
     <div class="carousel-inner">
+        <h1 class="text-center">Welcome to Nainital</h1>
       <div class="carousel-item active">
-        <img src="assets/klake.jpg" class="d-block w-100" alt="Naini Lake">
+        <img src="klake.jpg" class="d-block w-100" alt="Slide 1">
         <div class="carousel-caption d-none d-md-block">
           <h5>Beautiful Naini Lake</h5>
           <p>Experience the serenity of Nainital's famous lake.</p>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="assets/Snow-View-Point-Nainital.jpg" class="d-block w-100" alt="Snow View Point">
+        <img src="Snow-View-Point-Nainital.jpg" class="d-block w-100" alt="Slide 2">
         <div class="carousel-caption d-none d-md-block">
           <h5>Snowy Mountains</h5>
           <p>Marvel at the majestic Himalayan peaks.</p>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="assets/nainital1.jpg" class="d-block w-100" alt="Hilltop Views">
+        <img src="nainital1.jpg" class="d-block w-100" alt="Slide 3">
         <div class="carousel-caption d-none d-md-block">
           <h5>Hilltop Views</h5>
           <p>Capture breathtaking views from the hills.</p>
@@ -46,162 +38,22 @@
       </div>
     </div>
 
-    <!-- Controls -->
+    <!-- Carousel Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#nainitalCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#nainitalCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
 
-    <!-- Indicators -->
+    <!-- Carousel Indicators -->
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#nainitalCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#nainitalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
       <button type="button" data-bs-target="#nainitalCarousel" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#nainitalCarousel" data-bs-slide-to="2"></button>
     </div>
   </div>
-</div>
-
-<!-- Cards Accordion Section -->
-<div class=" row px-5">
-  
-  
-    <!-- Card 1 -->
-    <div class="col-sm-3 accordion" id="1">
-    <div class="">
-      <div class="card h-100 shadow">
-        <img src="assets/lake1.jpg" class="card-img-top" alt="Naini Lake">
-        <div class="card-body">
-          <h5 class="card-title">Naini Lake</h5>
-          <p class="card-text">A picturesque freshwater lake in the heart of Nainital...</p>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseOne" role="button" aria-expanded="false" aria-controls="collapseOne">Read More</a>
-          <div id="collapseOne" class="collapse mt-2" data-bs-parent="#1">
-            <p>Naini Lake is one of the most famous attractions of Nainital. Surrounded by lush hills, it offers boating, scenic views, and a serene atmosphere.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class=" col-sm-3 accordion" id="2">
-    <div class="">
-      <div class="card h-100 shadow">
-        <img src="assets/Snow-View-Point-Nainital.jpg" class="card-img-top" alt="Snow View Point">
-        <div class="card-body">
-          <h5 class="card-title">Snow View Point</h5>
-          <p class="card-text">A popular spot offering panoramic views of the Himalayas...</p>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">Read More</a>
-          <div id="collapseTwo" class="collapse mt-2" data-bs-parent="#2">
-            <p>Snow View Point gives visitors breathtaking views of snow-clad Himalayan peaks. Accessible via a cable car ride, it’s a must-visit for nature lovers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class=" col-sm-3 accordion" id="3">
-    <div class="">
-      <div class="card h-100 shadow">
-        <img src="assets/mallroad.jpg" class="card-img-top" alt="Mall Road">
-        <div class="card-body">
-          <h5 class="card-title">Mall Road</h5>
-          <p class="card-text">The main shopping hub of Nainital, buzzing with cafes...</p>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">Read More</a>
-          <div id="collapseThree" class="collapse mt-2" data-bs-parent="3">
-            <p>Mall Road is a lively stretch filled with shops, cafes, and local handicrafts. Perfect for shopping, dining, and evening strolls.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-sm-3  accordion" id="4">
-    <div class="">
-      <div class="card h-100 shadow">
-        <img src="assets/flora fauna.jpg" class="card-img-top" alt="Tiffin Top">
-        <div class="card-body">
-          <h5 class="card-title">Tiffin Top</h5>
-          <p class="card-text">Also known as Dorothy’s Seat, a hilltop picnic spot...</p>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">Read More</a>
-          <div id="collapseFour" class="collapse mt-2" data-bs-parent="#4">
-            <p>Tiffin Top is a popular picnic spot that offers panoramic views of Nainital town and surrounding hills. Great for trekking and photography.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  
-
-
-<!-- Footer Section -->
-<footer class="bg-dark text-light pt-4">
-  <div class="container-fluid">
-    <div class="row px-5">
-      
-      
-      <div class="col-md-3 mb-3">
-        <h5 class="fw-bold">Nainital-Info</h5>
-        <p class="text-muted">Easy Travelling </p>
-      </div>
-      
-   
-      <div class="col-md-2 mb-3">
-        <h6 class="fw-bold">Places</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-light">Weebly Themes</a></li>
-          <li><a href="#" class="text-decoration-none text-light">Pre-Sale FAQs</a></li>
-          <li><a href="#" class="text-decoration-none text-light">Submit a Ticket</a></li>
-        </ul>
-      </div>
-      
-
-      <div class="col-md-2 mb-3">
-        <h6 class="fw-bold">Services</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-light">Theme Tweak</a></li>
-          <li><a href="#" class="text-decoration-none text-light">Customization</a></li>
-        </ul>
-      </div>
-      
-     
-      <div class="col-md-2 mb-3">
-        <h6 class="fw-bold">Support</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-light">Showcase</a></li>
-          <li><a href="#" class="text-decoration-none text-light">Widgetkit</a></li>
-          <li><a href="#" class="text-decoration-none text-light">Support</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <hr class="border-secondary">
-    <div class="text-center ">
-      <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="text-light me-3"><i class="fas fa-rss"></i></a>
-      <a href="#" class="text-light me-3"><i class="fab fa-google-plus-g"></i></a>
-      <a href="#" class="text-light"><i class="fab fa-flickr"></i></a>
-    </div>
-
-    <div class="text-center text-muted pb-3">
-      © Copyright. All rights reserved.
-    </div>
-  </div>
-</footer> 
-
-
- 
-
-  
-
-
-  
-  
 
   

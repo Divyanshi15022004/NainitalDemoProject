@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Website';
-  showLoginForm = false;
-
-  toggleLogin() {
-    this.showLoginForm = !this.showLoginForm;
-  }
 }
-
