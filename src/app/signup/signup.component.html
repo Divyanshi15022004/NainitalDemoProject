@@ -1,0 +1,63 @@
+<form (ngSubmit)="signup()" #signupForm="ngForm">
+    <h1>Signup Page</h1>
+    
+    <input 
+      type="text" 
+      placeholder="Username" 
+      [(ngModel)]="username" 
+      name="username" 
+      required 
+      minlength="8" 
+      maxlength="16"  
+    /> 
+  <br>
+    <small *ngIf="signupForm.submitted && (username.length < 8 || username.length > 16)" style="color:red;">
+      Username must be <8 and > 15 characters
+    </small>
+    <br>
+    <input 
+      type="email" 
+      placeholder="Email" 
+      [(ngModel)]="email" 
+      name="email" 
+      required 
+      maxlength="20"   
+    >
+  <br>
+    <small *ngIf="signupForm.submitted && !email.endsWith('@gmail.com')" style="color:red;">
+    Email must contain @gmail.com
+    </small>
+    <br>
+    <input 
+      type="password" 
+      placeholder="Password" 
+      [(ngModel)]="password" 
+      name="password" 
+      required 
+    />
+    <br>
+    <small *ngIf="signupForm.submitted && !isPasswordValid(password)" style="color:red;">
+      Password must be at least 8 characters, include at least 1 lowercase 1 Upper case & 1 special character
+    </small>
+    <br>
+    <input 
+      type="tel" 
+      placeholder="Phone Number" 
+      [(ngModel)]="phone" 
+      name="phone" 
+      required 
+      maxlength="10"
+      (keypress)="onlyNumberKey($event)" 
+    />
+    <br>
+    <small *ngIf="signupForm.submitted && !phone.match('^[0-9]{10}$')" style="color:red;">
+      Phone number must be exactly 10 digits (only numbers allowed)
+    </small>
+    <br>
+  
+    <button type="submit">Signup</button>
+    <br>
+  
+    <p> Already have an account? <a routerLink="/login">Login here</a> </p>
+  </form>
+  
